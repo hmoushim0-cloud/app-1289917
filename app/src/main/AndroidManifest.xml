@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:label="تطبيق ركاب الذكي — مطلوب مصمم محترف لإعداد تقار"
+        android:label="تطبيق ركاب لتأجير السيارات - إدارة الأسطول والمفتاح الرقمي"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
         <activity

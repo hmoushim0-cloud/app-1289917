@@ -27,6 +27,7 @@ fun HomeScreen(
     onItemClick: (RekabTelematicsItem) -> Unit
 ) {
     val categories = listOf("الكل", "الخدمات الرئيسية", "المراقبة الحية", "التقارير الضريبية", "الإعدادات")
+    val defaultPeripheral = "OBD-II CAN-Bus Telematics + BLE Digital Key Fob"
 
     Column(
         modifier = Modifier
@@ -36,8 +37,8 @@ fun HomeScreen(
     ) {
         // Header
         Column {
-            Text("تطبيق ركاب الذكي — مطلوب مصمم محترف لإعداد تقار", fontSize = 22.sp, fontWeight = FontWeight.Black, color = BrandTextPrimary)
-            Text("منظومة car_rental المتكاملة مع ربط OBD-II CAN-Bus Telematics + BLE Digital Key Fob", fontSize = 12.sp, color = BrandTextSecondary)
+            Text("منظومة ركاب لتأجير السيارات - إدارة الأسطول والمفتاح الرقمي", fontSize = 22.sp, fontWeight = FontWeight.Black, color = BrandTextPrimary)
+            Text("تأجير ذاتي ذكي مدعوم ببروتوكول فحص المركبات OBD-II ومفتاح الدخول اللاسلكي", fontSize = 12.sp, color = BrandTextSecondary)
         }
 
         // Hardware Status Capsule
@@ -52,7 +53,7 @@ fun HomeScreen(
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Column(modifier = Modifier.weight(1f)) {
-                    Text("العتاد الحي: ${state.telemetry?.peripheralName ?: 'OBD-II CAN-Bus Telematics + BLE Digital Key Fob'}", fontWeight = FontWeight.Bold, color = BrandPrimary, fontSize = 13.sp)
+                    Text("العتاد الحي: ${state.telemetry?.peripheralName ?: defaultPeripheral}", fontWeight = FontWeight.Bold, color = BrandPrimary, fontSize = 13.sp)
                     Text(state.telemetry?.liveReading ?: "OBD-II CAN-Bus Telematics + BLE Digital Key Fob: ONLINE | READY", fontSize = 11.sp, color = BrandTextSecondary)
                 }
                 Badge(containerColor = BrandPrimary) {
